@@ -19,6 +19,7 @@ function QuoteBox() {
             <a
               href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${currentQuote.quote} \n author : ${currentQuote.author} \n`}
               target="_blank"
+              rel="noreferrer"
             >
               <AiFillTwitterSquare
                 className="twitter-icon"

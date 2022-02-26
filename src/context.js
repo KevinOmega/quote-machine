@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { colors } from "./colors";
 
 const url =
@@ -21,17 +21,17 @@ const AppProvider = ({ children }) => {
     setCurrentQuote(random(list));
   };
 
-  const fetchList = async () => {
+  const fetchList = useCallback(async () => {
     const response = await fetch(url);
     const data = await response.json();
     const { quotes } = data;
     setCurrentQuote(random(quotes));
     setList(quotes);
-  };
+  }, []);
 
   useEffect(() => {
     fetchList();
-  }, []);
+  }, [fetchList]);
 
   return (
     <AppContext.Provider value={{ color, currentQuote, changeQuote }}>
