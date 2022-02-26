@@ -1,0 +1,78 @@
+:root {
+  --light: #eef;
+}
+
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+#wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#quote-box {
+  background: var(--light);
+  width: 40rem;
+}
+
+.quote-center {
+  padding: 3rem;
+}
+
+#text {
+  text-align: start;
+  font-size: 1.5rem;
+}
+
+#author {
+  text-align: end;
+  font-size: 1.2rem;
+}
+.btn-control {
+  display: flex;
+  width: 100%;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+
+#new-quote {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.6rem;
+  font-family: "Courier New", Courier, monospace;
+  border: transparent;
+  font-size: 1.5rem;
+}
+
+#new-quote:hover {
+  transform: scale(1.1);
+}
+
+#tweet-quote {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.2rem;
+  border: transparent;
+  margin-left: 1rem;
+}
+
+.twitter-icon {
+  height: 3rem;
+  width: 3rem;
+  color: #fd7c54;
+  background: #eef;
+}
+
+#tweet-quote:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 499px) {
+  #quote-box {
+    width: 80%;
+  }
+}
